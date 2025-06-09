@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Юбилейная стоматологическая клиника</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+</head>
+<body>
+<header class="header-bar py-2 border-bottom bg-light">
+  <div class="container-fluid px-4">
+    <div class="d-flex flex-nowrap align-items-center w-100">
+      <!-- Логотип - один для всех устройств -->
+      <div class="d-flex align-items-center flex-shrink-0 me-3">
+        <a class="navbar-brand" href="#">
+          <img src="image/logo.png" alt="Logo" height="30" class="pulse-logo">
+        </a>
+        <div class="vr ms-3 d-none d-md-flex"></div>
+      </div>
+      <!-- Основной контент шапки -->
+      <div class="d-flex flex-nowrap flex-grow-1 justify-content-between align-items-center overflow-hidden">
+        <!-- Контактная информация - показываем на md+ -->
+        <div class="d-none d-md-flex flex-nowrap align-items-center flex-grow-1 px-md-3 px-lg-5 text-nowrap">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-geo-alt"></i>
+            <a href="#map" class="text-decoration-none text-dark">найти на карте</a>
+          </div>
+          <div class="vr mx-2"></div>
+          <a href="mailto:krdysk@yandex.ru" class="text-decoration-none text-dark d-none d-xl-inline">krdysk@yandex.ru</a>
+          <div class="vr mx-2 d-none d-xl-flex"></div>
+          <a href="tel:+78005008535" class="text-decoration-none text-dark">+7 (800) 500-85-35</a>
+          <div class="vr mx-2 d-none d-lg-flex"></div>
+          <a href="tel:+78612050335" class="text-decoration-none text-dark d-none d-lg-inline">+7 (861) 205-03-35</a>
+          <div class="vr mx-2"></div>
+          <div class="d-flex align-items-center gap-2 social-icons">
+            <a href="https://t.me/+79898238652" target="_blank" rel="noopener noreferrer">
+              <img src="image/telegram.png" alt="Telegram" width="24" height="24">
+            </a>
+            <a href="https://vk.com/public223046960" target="_blank" rel="noopener noreferrer">
+              <img src="image/vk.png" alt="VK" width="24" height="24">
+            </a>
+            <a href="https://ok.ru/profile/593680392623" target="_blank" rel="noopener noreferrer">
+              <img src="image/ok.png" alt="OK" width="24" height="24">
+            </a>
+          </div>
+        </div>
+        <!-- Кнопка заказа звонка - показываем на md+ -->
+        <div class="d-none d-md-flex align-items-center flex-shrink-0 ms-3">
+          <div class="vr me-2"></div>
+          <button class="btn btn-primary border-0 rounded-0 px-4" style="white-space: nowrap;">
+            Заказать звонок
+          </button>
+        </div>
+        <!-- Мобильная версия (до md) -->
+        <div class="d-flex d-md-none justify-content-end align-items-center flex-grow-1">
+          <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="d-flex gap-3">
+            <a href="https://t.me/+79898238652" target="_blank" rel="noopener noreferrer">
+              <img src="image/telegram.png" alt="Telegram" width="24">
+            </a>
+            <a href="https://vk.com/public223046960" target="_blank" rel="noopener noreferrer">
+              <img src="image/vk.png" alt="VK" width="24">
+            </a>
+            <a href="https://ok.ru/profile/593680392623" target="_blank" rel="noopener noreferrer">
+              <img src="image/ok.png" alt="OK" width="24">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav class="navbar navbar-expand-lg mt-2 w-100">
+  <div class="container-fluid px-4">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav w-100 d-flex justify-content-between">
+        <li class="nav-item"><a class="nav-link" href="#">Главная</a></li>
+        <!-- Услуги -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+            Услуги
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Терапевтическая стоматология</a></li>
+            <li><a class="dropdown-item" href="#">Детская стоматология</a></li>
+            <li><a class="dropdown-item" href="#">Дентальная имплантация</a></li>
+            <li><a class="dropdown-item" href="#">Ортопедическая стоматология</a></li>
+            <li><a class="dropdown-item" href="#">Ортодонтия</a></li> 
+            <li><a class="dropdown-item" href="#">Рентгенография и 3D томография</a></li>
+            <li><a class="dropdown-item" href="#">Хирургическая стоматология</a></li>
+            <li><a class="dropdown-item" href="#">Профессиональная гигиена</a></li>
+            <li><a class="dropdown-item" href="#">Отбеливание</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Цены</a></li>
+        <!-- О нас -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+            О нас
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Наша история</a></li>
+            <li><a class="dropdown-item" href="#">Наша команда</a></li>
+            <li><a class="dropdown-item" href="#">Отзывы</a></li>
+            <li><a class="dropdown-item" href="#">Миссия и ценности</a></li>
+            <li><a class="dropdown-item" href="#">Сертификаты</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Пациентам</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Новости</a></li>
+        <!-- Галерея -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="galleryDropdown" role="button" data-bs-toggle="dropdown">
+            Галерея
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Интерьер клиники</a></li>
+            <li><a class="dropdown-item" href="#">Оборудование</a></li>
+            <li><a class="dropdown-item" href="#">Врачи за работой</a></li>
+            <li><a class="dropdown-item" href="#">Мероприятия</a></li>
+            <li><a class="dropdown-item" href="#">Пациенты</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Вакансии</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <section class="hero-section">
+  <div class="container">
+    <h1>«Юбилейная»</h1>
+    <h2>стоматологическая клиника</h2>
+    <p class="lead">Мы дорожим доверием наших пациентов и делаем всё, чтобы его оправдать</p>
+    <div id="multiCardCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Слайд 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center gap-3">
+            <div class="service-card" style="flex: 0 0 30%;">
+              <h4>Лечение зубов под микроскопом</h4>
+              <img src="image/microscope.png" alt="Microscope">
+              <a href="#" class="text-link">Подробнее</a>
+            </div>
+            <div class="promo-card" style="flex: 0 0 30%;">
+              <img src="image/man.png" alt="Promo">
+              <h5>10% скидка пенсионерам по возрасту</h5>
+              <a href="#" class="text-link-dark">Подробнее</a>
+            </div>
+            <div class="service-card" style="flex: 0 0 30%;">
+              <h4>Дентальная имплантация</h4>
+              <img src="image/implants.png" alt="Implant">
+              <a href="#" class="text-link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <!-- Слайд 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center gap-3">
+            <div class="service-card" style="flex: 0 0 30%;">
+              <h4>3D Компьютерная томография зубов 2500 ₽</h4>
+              <img src="image/tomograph.png" alt="Microscope">
+              <a href="#" class="text-link">Подробнее</a>
+            </div>
+            <div class="promo-card" style="flex: 0 0 30%;">
+              <img src="image/seal.png" alt="Promo">
+              <h5>Каждая 3-я светоотверждаемая пломба в подарок</h5>
+              <a href="#" class="text-link-dark">Подробнее</a>
+            </div>
+            <div class="service-card" style="flex: 0 0 30%;">
+              <h4>Эта Халва полезна для зубов</h4>
+              <img src="image/card.png" alt="Implant">
+              <a href="#" class="text-link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <!-- Слайд 3 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center gap-3">
+            <div class="service-card" style="flex: 0 0 30%;">
+              <h4>Каждая 3-я светоотверждаемая пломба в подарок</h4>
+              <img src="image/seal.png" alt="Microscope">
+              <a href="#" class="text-link">Подробнее</a>
+            </div>
+            <div class="promo-card" style="flex: 0 0 30%;">
+              <img src="image/card.png" alt="Promo">
+              <h5>Эта Халва полезна для зубов</h5>
+              <a href="#" class="text-link-dark">Подробнее</a>
+            </div>
+            <div class="service-card" style="flex: 0 0 30%;">
+              <h4>Работаем без выходных</h4>
+              <img src="image/week.png" alt="Implant">
+              <a href="#" class="text-link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#multiCardCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#multiCardCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+      <!-- Indicators -->
+      <div class="carousel-indicators mt-4">
+        <button type="button" data-bs-target="#multiCardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="1"></button>
+        <button type="button" data-bs-target="#multiCardCarousel" data-bs-slide-to="1" aria-label="2"></button>
+        <button type="button" data-bs-target="#multiCardCarousel" data-bs-slide-to="2" aria-label="3"></button>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Раздел особенностей -->
+    <section class="py-5">
+  <div class="container-fluid px-2">
+    <div class="row mb-5">
+      <!-- Заголовок слева -->
+      <div class="col-md-4 mb-4 mb-md-0">
+        <h2 class="mb-4">Почему именно нас выбирают пациенты?</h2>
+        <a href="#" class="d-flex align-items-center text-dark text-decoration-none small">
+          О нас <i class="bi bi-chevron-right ms-2"></i>
+        </a>
+      </div>
+      <!-- Блоки с фичами -->
+      <div class="col-md-8">
+        <!-- Один блок -->
+        <div class="row mb-4">
+          <div class="col-12 col-md-5 col-lg-4 mb-3 mb-md-0">
+            <img src="image/tools.png" alt="Feature" class="img-fluid rounded w-100">
+          </div>
+          <div class="col-12 col-md-7 col-lg-8 d-flex flex-column justify-content-between">
+            <h3>Оказываем все виды стоматологических услуг</h3>
+            <a href="#" class="bg-light p-2 rounded align-self-start mt-2">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12 col-md-5 col-lg-4 mb-3 mb-md-0">
+            <img src="image/teeth.png" alt="Feature" class="img-fluid rounded w-100">
+          </div>
+          <div class="col-12 col-md-7 col-lg-8 d-flex flex-column justify-content-between">
+            <h3>Гарантируем пациентам качество и безопасность</h3>
+            <a href="#" class="bg-light p-2 rounded align-self-start mt-2">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12 col-md-5 col-lg-4 mb-3 mb-md-0">
+            <img src="image/equipment.png" alt="Feature" class="img-fluid rounded w-100">
+          </div>
+          <div class="col-12 col-md-7 col-lg-8 d-flex flex-column justify-content-between">
+            <h3>Используем современное оборудование нового поколения и следим за последними тенденциями в стоматологии</h3>
+            <a href="#" class="bg-light p-2 rounded align-self-start mt-2">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-5 col-lg-4 mb-3 mb-md-0">
+            <img src="image/jaw.png" alt="Feature" class="img-fluid rounded w-100">
+          </div>
+          <div class="col-12 col-md-7 col-lg-8 d-flex flex-column Cbetween">
+            <h3>Дорожим вашим доверием</h3>
+            <a href="#" class="bg-light p-2 rounded align-self-start mt-2">
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Дополнительный информационный блок -->
+    <div class="row py-5 bg-light justify-content-center text-center">
+  <div class="col-12 col-md-8">
+    <p class="display-6 px-2">
+      <span class="text-muted">В клинике оказываются </span>
+      <span class="text-primary">все виды<br>стоматологических услуг</span>
+      <span class="text-muted">, включая детскую стоматологию, ортодонтию, компьютерную 3D томографию зубов</span>
+    </p>
+  </div>
+</div>
+  </div>
+</section>
+    <!-- Раздел услуг -->
+   <section class="py-5">
+  <div class="container-fluid px-2">
+    <h2 class="mb-5">Услуги</h2>
+    <div class="row g-0">
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item">
+          <h3>Терапевтическая<br>стоматология</h3>
+          <div class="d-flex justify-content-between">
+            <span>3 услуги</span>
+            <a href="#" class="bg-light p-2 rounded"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item">
+          <h3>Детская стоматология</h3>
+          <div class="d-flex justify-content-between">
+            <span>1 услуга</span>
+            <a href="#" class="bg-light p-2 rounded"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+<!-- Картинка -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item p-0">
+          <img src="image/layoutjaw.png" alt="Service">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item">
+          <h3>Дентальная<br>имплантация</h3>
+          <div class="d-flex justify-content-between">
+            <span>1 услуга</span>
+            <a href="#" class="bg-light p-2 rounded"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+         <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item bg-light">
+          <h3>Ортопедическая<br>стоматология</h3>
+          <div class="d-flex justify-content-between">
+            <span>5 услуг</span>
+            <a href="#" class="bg-white p-2 rounded"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Остальные блоки -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item">
+          <h3>Ортондонтия</h3>
+          <div class="d-flex justify-content-between">
+            <span>4 услуги</span>
+            <a href="#" class="bg-light p-2 rounded"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+ <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item p-0">
+          <img src="image/mirror.png" alt="Service">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item">
+          <h3>Рентгенография<br>и 3D компьютерная<br>томография</h3>
+          <div class="d-flex justify-content-between">
+            <span>1 услуга</span>
+            <a href="#" class="bg-light p-2 rounded"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+   <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item">
+          <h3>Хирургическая<br>стомотология</h3>
+          <div class="d-flex justify-content-between">
+            <span>3 услуга</span>
+            <a href="#" class="bg-light p-2 rounded"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Финальная картинка -->
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item">
+          <h3>Профессиональная<br>гигиена</h3>
+          <div class="d-flex justify-content-between">
+            <span>1 услуга</span>
+            <a href="#" class="bg-light p-2 rounded"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item bg-light">
+          <h3>Отбеливание</h3>
+          <div class="d-flex justify-content-between">
+            <span>7 услуг</span>
+            <a href="#" class="bg-white p-2 rounded"><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+<div class="col-lg-4 col-md-6 col-12">
+        <div class="service-item p-0">
+          <img src="image/dentistry.png" alt="Service">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Раздел записи на прием -->
+<section class="appointment-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto"> 
+                <h2 class="mb-5">Вы можете записаться на прием</h2>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <input type="text" class="form-control form-control-lg bg-white bg-opacity-80 rounded-0" placeholder="Имя"> 
+                        </div>
+                        <div class="col-md-3">
+                            <input type="tel" class="form-control form-control-lg bg-white bg-opacity-80 rounded-0" placeholder="Телефон"> 
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control form-control-lg bg-white bg-opacity-80 rounded-0" placeholder="Ваш вопрос"> 
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-primary btn-lg w-100 bg-opacity-70 rounded-0">Отправить</button> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Раздел о нас -->
+   <section class="py-5">
+  <div class="container-fluid px-2">
+    <div class="row">
+      <div class="col-md-3">
+        <h2>О нас</h2>
+      </div>
+      <div class="col-md-9">
+        <p class="lead">
+          Каневская стоматологическая клиника – это полноценный стоматологический центр для всей семьи.<br><br>
+          Комфортно всем: малышам, подросткам, родителям, бабушкам и дедушкам.<br><br>
+          Тут и разнообразный перечень услуг, и возможность лечиться платно или по полису ОМС, отличные врачи со смежными специальностями и удобное время<br><br>
+          У нас все чувствуют себя как дома. Посетив клинику однажды, пациенты Брюховецкой, Ленинградской, Кущевской, Староминской, Тимашевска, Приморско-Ахтарска, Ейска, Краснодара, других регионов (Москвы, Санкт-Петербурга, Тюмени и др.) возвращаются к нам снова и снова!
+        </p>
+        <a href="#" class="text-primary">Подробнее</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Раздел видео -->
+<div class="py-5">
+  <div class="container-fluid px-2">
+    <h2 class="mb-4">Наша работа</h2>
+    <div class="ratio ratio-16x9">
+      <iframe 
+        src="media/anaesthesia.mp4" 
+        title="Стоматологическое видео" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        class="rounded w-100"
+      ></iframe>
+    </div>
+  </div>
+</div>
+<!-- Раздел карты -->
+<section id="map" class="py-5">
+  <div class="container-fluid px-2">
+    <h2 class="mb-5">Схема проезда</h2>
+    <div class="ratio ratio-16x9">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.402655671107!2d38.914368776785516!3d45.037050271070115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f04f20f9ac4a7b%3A0xcc0cd9a0f41aea42!2zVWxpdHNhIER1bWVua28sIDIxINC60L7RgNC_0YPRgSAxLCBLcmFzbm9kYXIsIEtyYXNub2RhcnNraXkga3JheSwgUnVzc2lhLCAzNTAwODk!5e0!3m2!1sen!2sby!4v1748885626296!5m2!1sen!2sby"
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded w-100"
+      ></iframe>
+    </div>
+  </div>
+</section>
+    <!-- Нижний колонтитул -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-column">
+                    <h6 class="fw-bold">Информация</h6>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="#" class="text-dark">Главная</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Услуги</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Цены</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">О нас</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Пациентам</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Акции</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Новости</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Галерея</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Вакансии</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-column border-start ps-4">
+                    <h6 class="fw-bold">Услуги</h6>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="#" class="text-dark">Лечение зубов</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Детская стоматология</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Дентальная имплантация</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Отбеливание зубов</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Ортодонтия</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Рентгенография и 3D компьютерная томография</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Протезирование зубов</a></li>
+                        <li class="mb-2"><a href="#" class="text-dark">Хирургическая стоматология</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-column border-start ps-4">
+                    <h6 class="fw-bold">Контакты</h6>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2 d-flex align-items-center">
+                            <i class="bi bi-telephone me-2"></i>
+                            <a href="tel:+78005008535" class="text-dark">+7 (800) 500 85 35</a>
+                        </li>
+                        <li class="mb-2 d-flex align-items-center">
+                            <i class="bi bi-telephone me-2"></i>
+                            <a href="tel:+78612050335" class="text-dark">+7 (861) 205 03 35</a>
+                        </li>
+                        <li class="mb-2 d-flex align-items-center">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:krdysk@yandex.ru" class="text-dark">krdysk@yandex.ru</a>
+                        </li>
+                        <li class="mb-2 d-flex align-items-start">
+                            <i class="bi bi-geo-alt me-2 mt-1"></i>
+                            <span>Краснодарский край, г. Краснодар, Западный округ, ул. Думенко, д. 21/1</span>
+                        </li>
+                        <li class="mt-4">
+                          <div class="d-flex gap-3">
+                            <a href="https://t.me/+79898238652" target="_blank" rel="noopener noreferrer">
+                              <img src="image/telegram.png" alt="Telegram" width="24" height="24">
+                            </a>
+                            <a href="https://vk.com/public223046960" target="_blank" rel="noopener noreferrer">
+                              <img src="image/vk.png" alt="VK" width="24" height="24">
+                            </a>
+                            <a href="https://ok.ru/profile/593680392623" target="_blank" rel="noopener noreferrer">
+                              <img src="image/ok.png" alt="OK" width="24" height="24">
+                            </a>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row footer-bottom">
+                <div class="col-md-4">
+                    <p class="mb-0">«Юбилейная» стоматологическая клиника</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="mb-0">2023. Все права защищены</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <a href="#" class="text-dark">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<div class="end-slider">
+  <h2 class="visually-hidden">Наши партнеры</h2>
+  <div class="swiper endSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="image/1.png" alt="1"></div>
+      <div class="swiper-slide"><img src="image/2.png" alt="2"></div>
+      <div class="swiper-slide"><img src="image/3.png" alt="3"></div>
+      <div class="swiper-slide"><img src="image/4.png" alt="4"></div>
+      <div class="swiper-slide"><img src="image/5.png" alt="5"></div>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script/swiper.js"></script>
+    <script src="script/header.js"></script>
+    <script src="script/text.js"></script>
+    <script src="script/hints.js"></script>
+    <script src="script/footer.js"></script>
+    <script src="script/text_flip.js"></script>
+    <script src="script/serviceCards_effects.js"></script>
+    <script src="script/jquery_scrolling.js"></script>
+    <script src="script/form1_validation.js"></script>
+    <script src="script/form2_validation.js"></script>
+    <script src="script/form3_validation.js"></script>
+</body>
+</html>
