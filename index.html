@@ -12,69 +12,79 @@
 <body>
 <header class="header-bar py-2 border-bottom bg-light">
   <div class="container-fluid px-4">
-    <div class="d-flex flex-nowrap align-items-center w-100">
-      <!-- Логотип - один для всех устройств -->
-      <div class="d-flex align-items-center flex-shrink-0 me-3">
+    <div class="d-flex flex-nowrap align-items-center w-100 justify-content-between">
+      <!-- Логотип -->
+      <div class="d-flex align-items-center flex-shrink-0">
         <a class="navbar-brand" href="#">
           <img src="image/logo.png" alt="Logo" height="30" class="pulse-logo">
         </a>
         <div class="vr ms-3 d-none d-md-flex"></div>
       </div>
-      <!-- Основной контент шапки -->
-      <div class="d-flex flex-nowrap flex-grow-1 justify-content-between align-items-center overflow-hidden">
-        <!-- Контактная информация - показываем на md+ -->
-        <div class="d-none d-md-flex flex-nowrap align-items-center flex-grow-1 px-md-3 px-lg-5 text-nowrap">
-          <div class="d-flex align-items-center gap-2">
-            <i class="bi bi-geo-alt"></i>
-            <a href="#map" class="text-decoration-none text-dark">найти на карте</a>
-          </div>
-          <div class="vr mx-2"></div>
-          <a href="mailto:krdysk@yandex.ru" class="text-decoration-none text-dark d-none d-xl-inline">krdysk@yandex.ru</a>
-          <div class="vr mx-2 d-none d-xl-flex"></div>
-          <a href="tel:+78005008535" class="text-decoration-none text-dark">+7 (800) 500-85-35</a>
-          <div class="vr mx-2 d-none d-lg-flex"></div>
-          <a href="tel:+78612050335" class="text-decoration-none text-dark d-none d-lg-inline">+7 (861) 205-03-35</a>
-          <div class="vr mx-2"></div>
-          <div class="d-flex align-items-center gap-2 social-icons">
-            <a href="https://t.me/+79898238652" target="_blank" rel="noopener noreferrer">
-              <img src="image/telegram.png" alt="Telegram" width="24" height="24">
-            </a>
-            <a href="https://vk.com/public223046960" target="_blank" rel="noopener noreferrer">
-              <img src="image/vk.png" alt="VK" width="24" height="24">
-            </a>
-            <a href="https://ok.ru/profile/593680392623" target="_blank" rel="noopener noreferrer">
-              <img src="image/ok.png" alt="OK" width="24" height="24">
-            </a>
-          </div>
-        </div>
-        <!-- Кнопка заказа звонка - показываем на md+ -->
-        <div class="d-none d-md-flex align-items-center flex-shrink-0 ms-3">
-          <div class="vr me-2"></div>
-          <button class="btn btn-primary border-0 rounded-0 px-4" style="white-space: nowrap;">
-            Заказать звонок
-          </button>
-        </div>
-        <!-- Мобильная версия (до md) -->
-        <div class="d-flex d-md-none justify-content-end align-items-center flex-grow-1">
-          <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="d-flex gap-3">
-            <a href="https://t.me/+79898238652" target="_blank" rel="noopener noreferrer">
-              <img src="image/telegram.png" alt="Telegram" width="24">
-            </a>
-            <a href="https://vk.com/public223046960" target="_blank" rel="noopener noreferrer">
-              <img src="image/vk.png" alt="VK" width="24">
-            </a>
-            <a href="https://ok.ru/profile/593680392623" target="_blank" rel="noopener noreferrer">
-              <img src="image/ok.png" alt="OK" width="24">
-            </a>
-          </div>
+
+      <!-- Центр: Контактная информация -->
+<div class="d-none d-md-flex align-items-center justify-content-between w-100 px-md-3 px-lg-5">
+  <div class="d-flex align-items-center gap-2">
+    <i class="bi bi-geo-alt"></i>
+    <a href="#map" class="text-decoration-none text-dark">найти на карте</a>
+  </div>
+
+  <div class="vr"></div>
+
+  <a href="mailto:krdysk@yandex.ru" class="text-decoration-none text-dark d-none d-xl-inline">krdysk@yandex.ru</a>
+
+  <div class="vr d-none d-xl-flex"></div>
+
+  <a href="tel:+78005008535" class="text-decoration-none text-dark">+7 (800) 500-85-35</a>
+
+  <div class="vr d-none d-lg-flex"></div>
+
+  <a href="tel:+78612050335" class="text-decoration-none text-dark d-none d-lg-inline">+7 (861) 205-03-35</a>
+
+  <div class="vr"></div>
+
+  <div class="d-flex align-items-center gap-2 social-icons">
+    <a href="https://t.me/+79898238652" target="_blank" rel="noopener noreferrer">
+      <img src="image/telegram.png" alt="Telegram" width="24" height="24">
+    </a>
+    <a href="https://vk.com/public223046960" target="_blank" rel="noopener noreferrer">
+      <img src="image/vk.png" alt="VK" width="24" height="24">
+    </a>
+    <a href="https://ok.ru/profile/593680392623" target="_blank" rel="noopener noreferrer">
+      <img src="image/ok.png" alt="OK" width="24" height="24">
+    </a>
+  </div>
+</div>
+
+
+      <!-- Правая часть: кнопка -->
+      <div class="d-none d-md-flex align-items-center flex-shrink-0">
+        <div class="vr me-2"></div>
+        <button class="btn btn-primary border-0 rounded-0 px-4" style="white-space: nowrap;">
+          Заказать звонок
+        </button>
+      </div>
+
+      <!-- Мобильная версия -->
+      <div class="d-flex d-md-none justify-content-end align-items-center flex-grow-1">
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="d-flex gap-3">
+          <a href="https://t.me/+79898238652" target="_blank" rel="noopener noreferrer">
+            <img src="image/telegram.png" alt="Telegram" width="24">
+          </a>
+          <a href="https://vk.com/public223046960" target="_blank" rel="noopener noreferrer">
+            <img src="image/vk.png" alt="VK" width="24">
+          </a>
+          <a href="https://ok.ru/profile/593680392623" target="_blank" rel="noopener noreferrer">
+            <img src="image/ok.png" alt="OK" width="24">
+          </a>
         </div>
       </div>
     </div>
   </div>
 </header>
+
 <nav class="navbar navbar-expand-lg mt-2 w-100">
   <div class="container-fluid px-4">
     <div class="collapse navbar-collapse" id="navbarNav">
